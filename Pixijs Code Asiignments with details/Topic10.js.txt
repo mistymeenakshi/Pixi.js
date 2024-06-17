@@ -1,0 +1,16 @@
+
+
+
+Creating the Renderer
+javascript
+Copy code
+const renderer = app.renderer;
+Output: No visual output; the renderer object is now accessible for further customization.
+
+Handling Screen Resizing
+javascript
+Copy code
+window.addEventListener('resize', () => {
+    app.renderer.resize(window.innerWidth, window.innerHeight);
+});
+Output: The PixiJS canvas resizes to fit the browser window whenever it is resized.

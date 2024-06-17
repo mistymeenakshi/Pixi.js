@@ -1,0 +1,35 @@
+Creating and Managing Sprites
+Sprite Basics
+javascript
+Copy code
+const sprite = new PIXI.Sprite.from('assets/symbol1.png');
+sprite.x = 100;
+sprite.y = 100;
+app.stage.addChild(sprite);
+Output: A sprite (image) is displayed at position (100, 100) on the canvas.
+
+
+Animated Sprites
+javascript
+Copy code
+const frames = [];
+for (let i = 0; i < 10; i++) {
+    frames.push(PIXI.Texture.from(`assets/anim_frame_${i}.png`));
+}
+const anim = new PIXI.AnimatedSprite(frames);
+anim.animationSpeed = 0.5;
+anim.play();
+app.stage.addChild(anim);
+Output: An animated sprite plays an animation loop using 10 frames of images.
+
+
+Managing Sprite States
+javascript
+Copy code
+const sprite = new PIXI.Sprite.from('assets/symbol1.png');
+sprite.interactive = true;
+sprite.on('pointerdown', () => {
+    sprite.texture = PIXI.Texture.from('assets/symbol2.png');
+});
+app.stage.addChild(sprite);
+Output: When the sprite is clicked, its image changes from symbol1.png to symbol2.png.

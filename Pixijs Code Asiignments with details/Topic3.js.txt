@@ -1,0 +1,21 @@
+Preloading Assets
+javascript
+Copy code
+app.loader
+    .add('symbol1', 'assets/symbol1.png')
+    .add('symbol2', 'assets/symbol2.png')
+    .load((loader, resources) => {
+        // Assets loaded
+        const symbol1 = new PIXI.Sprite(resources.symbol1.texture);
+        app.stage.addChild(symbol1);
+    });
+Output: The symbol1 image is displayed on the canvas once it is loaded.
+
+
+Handling Loading Errors
+javascript
+Copy code
+app.loader.onError.add((error) => {
+    console.error('Error loading asset:', error);
+});
+Output: If an asset fails to load, an error message is logged to the console.

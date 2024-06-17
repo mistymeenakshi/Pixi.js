@@ -1,0 +1,13 @@
+Slot Machine Mechanics
+Designing the Slot Reel
+The slot reel consists of symbols arranged in a vertical stack. Each reel can spin independently to create the slot machine effect.
+
+
+const reelContainer = new PIXI.Container();
+app.stage.addChild(reelContainer);
+
+const symbols = ['symbol1.png', 'symbol2.png', 'symbol3.png'];
+for (let i = 0; i < 3; i++) {
+    const symbol = new PIXI.Sprite.from(`assets/${symbols[i]}`);
+    symbol.y = i * symbol.height;
+    reelContainer.addChild(symbol);

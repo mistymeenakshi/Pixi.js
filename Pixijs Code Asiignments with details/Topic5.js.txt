@@ -1,0 +1,22 @@
+The Game Loop
+javascript
+Copy code
+app.ticker.add((delta) => {
+    // Update game state
+});
+Output: No visual output; the game loop is now running, updating the game state on each frame.
+
+Using Ticker for Animation
+javascript
+Copy code
+app.ticker.add((delta) => {
+    sprite.rotation += 0.01 * delta;
+});
+Output: The sprite rotates slowly around its center.
+
+
+Managing Frame Rate
+javascript
+Copy code
+app.ticker.maxFPS = 60;
+Output: No visual output; the maximum frame rate is now limited to 60 FPS.

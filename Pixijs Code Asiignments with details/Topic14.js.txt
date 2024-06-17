@@ -1,0 +1,28 @@
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PixiJS Slot Game</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+</head>
+<body>
+    <script>
+        // Basic PixiJS setup
+        const app = new PIXI.Application({ width: 800, height: 600 });
+        document.body.appendChild(app.view);
+    </script>
+</body>
+</html>
+//Output: A blank canvas of size 800x600 pixels is displayed in the browser.
+
+
+
+
+
+const container = new PIXI.Container();
+const sprite = PIXI.Sprite.from('path/to/image.png');
+container.addChild(sprite);
+app.stage.addChild(container);
+//Output: A sprite (image) is displayed on the canvas, grouped within a container.
